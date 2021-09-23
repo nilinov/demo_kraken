@@ -71,21 +71,12 @@
   "name": "Lampo",
   "endpoints": [
     {
-      "endpoint": "/static",
+      "endpoint": "/static?page=1",
       "backend": [
         {
           "host": [
             "http://ovz5.j1121565.m719m.vps.myjino.ru/"
-          ],
-          "url_pattern": "/foo",
-          "group": "foo"
-        },
-        {
-          "host": [
-            "http://ovz5.j1121565.m719m.vps.myjino.ru/"
-          ],
-          "url_pattern": "/bar",
-          "group": "bar"
+          ]
         }
       ],
       "extra_config": {
