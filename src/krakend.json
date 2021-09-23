@@ -69,37 +69,38 @@
   "cache_ttl": "1s",
   "output_encoding": "json",
   "name": "Lampo",
-  "static": {
-    "strategy": "errored",
-    "data": {
-      "dd": "sdfsdf"
-    }
-  },
   "endpoints": [
     {
-      "endpoint": "/v1/foo",
-      "method": "GET",
+      "endpoint": "/static",
       "backend": [
         {
-          "url_pattern": "/todos",
-          "method": "GET",
           "host": [
-            "https://jsonplaceholder.typicode.com"
-          ]
+            "http://ovz5.j1121565.m719m.vps.myjino.ru/"
+          ],
+          "url_pattern": "/foo",
+          "group": "foo"
+        },
+        {
+          "host": [
+            "http://ovz5.j1121565.m719m.vps.myjino.ru/"
+          ],
+          "url_pattern": "/bar",
+          "group": "bar"
         }
-      ]
-    },
-
-    {{ template "debug.tmpl" .service }},
-    {{ template "dictionary.tmpl" .service }},
-    {{ template "users.tmpl" .service }},
-    {{ template "feed.tmpl" .service }},
-    {{ template "resources.tmpl" .service }},
-    {{ template "discussion.tmpl" .service }},
-    {{ template "endorsed.tmpl" .service }},
-    {{ template "invites.tmpl" .service }},
-    {{ template "answers.tmpl" .service }},
-    {{ template "chats.tmpl" .service }},
-    {{ template "gamification.tmpl" .service }}
+      ],
+      "extra_config": {
+        "github.com/devopsfaith/krakend/proxy": {
+          "static": {
+            "strategy": "errored",
+            "data": {
+              "oh-snap": {
+                "id": 42,
+                "bar": "foobar"
+              }
+            }
+          }
+        }
+      }
+    }
   ]
 }
