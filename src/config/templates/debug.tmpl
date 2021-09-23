@@ -1,0 +1,25 @@
+{
+  "endpoint": "/api/{{.users.version}}/debug",
+  "method": "GET",
+  "output_encoding": "json",
+  "headers_to_pass": [
+    "*"
+  ],
+  "backend": [
+    {
+      "url_pattern": "{{.users.prefix}}/debug",
+      "encoding": "json",
+      "method": "GET",
+      "host": [
+        "{{.users.host}}"
+      ],
+      "extra_config": {
+        "github.com/devopsfaith/krakend/http": {
+          "return_error_details": "backend"
+        }
+      },
+      "target": "data"
+    }
+  ]
+}
+

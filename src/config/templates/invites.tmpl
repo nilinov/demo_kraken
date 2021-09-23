@@ -1,0 +1,68 @@
+
+  {
+    "endpoint": "/api/{{.users.version}}/invites",
+    "method": "GET",
+    "output_encoding": "json",
+    "querystring_params": [
+      "page",
+      "per_page"
+    ],
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.users.prefix}}/invites",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.users.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      },
+      {
+        "url_pattern": "{{.users.prefix}}/invites-meta",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.users.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data",
+        "group": "invites_meta"
+      }
+    ]
+  },
+
+  {
+    "endpoint": "/api/{{.users.version}}/invites",
+    "method": "POST",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.users.prefix}}/invites",
+        "encoding": "json",
+        "method": "POST",
+        "host": [
+          "{{.users.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data"
+      }
+    ]
+  }

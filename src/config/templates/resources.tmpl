@@ -1,0 +1,53 @@
+
+  {
+    "endpoint": "/api/{{.resource.version}}/resources",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "querystring_params": [
+      "type"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.resource.prefix}}/resources",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.resource.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/{{.resource.version}}/resources",
+    "method": "POST",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.resource.prefix}}/resources",
+        "encoding": "json",
+        "method": "POST",
+        "host": [
+          "{{.resource.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data"
+      }
+    ]
+  }
+
+

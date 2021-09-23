@@ -1,0 +1,73 @@
+
+  {
+    "endpoint": "/api/{{.discussion.version}}/chats/{id}/messages/{id2}",
+    "method": "DELETE",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.discussion.prefix}}/chats/{id}/messages/{id2}",
+        "encoding": "json",
+        "method": "DELETE",
+        "host": [
+          "{{.discussion.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/{{.discussion.version}}/chats/{id}/users/{id2}",
+    "method": "PUT",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.discussion.prefix}}/chats/{id}/users/{id2}",
+        "encoding": "json",
+        "method": "PUT",
+        "host": [
+          "{{.discussion.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/{{.discussion.version}}/chats/{id}/users/{id2}",
+    "method": "DELETE",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.discussion.prefix}}/chats/{id}/users/{id2}",
+        "encoding": "json",
+        "method": "DELETE",
+        "host": [
+          "{{.discussion.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data"
+      }
+    ]
+  }

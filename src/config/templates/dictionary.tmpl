@@ -1,0 +1,75 @@
+
+  {
+    "endpoint": "/api/{{.dictionary.version}}/dictionaries/{id}/dictionary-items",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.dictionary.prefix}}/dictionaries/{id}/dictionary-items",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.dictionary.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "endpoint": "/api/{{.dictionary.version}}/dictionaries/{id}/dictionary-items/{id2}",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.dictionary.prefix}}/dictionaries/{id}/dictionary-items/{id2}",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.dictionary.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "endpoint": "/api/{{.dictionary.version}}/tags",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "querystring_params": [
+      "search"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.dictionary.prefix}}/tags",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.dictionary.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  }

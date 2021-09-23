@@ -1,0 +1,17 @@
+version: "3.7"
+
+x-logging: &logging
+  driver: "json-file"
+  options:
+    max-size: "1m"
+    max-file: "1"
+
+services:
+  krakend:
+    image: $CI_REGISTRY_IMAGE:$TAG
+    restart: always
+    logging: *logging
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+

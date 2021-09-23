@@ -1,0 +1,46 @@
+  {
+    "endpoint": "/api/{{.discussion.version}}/gamification/trophies/{id}",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.discussion.prefix}}/gamification/trophies/{id}",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.discussion.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/{{.discussion.version}}/gamification/tasks",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.discussion.prefix}}/gamification/tasks",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.discussion.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  }

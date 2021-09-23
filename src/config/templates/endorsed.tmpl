@@ -1,0 +1,73 @@
+
+  {
+    "endpoint": "/api/{{.users.version}}/users/{id}/endorsed",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.users.prefix}}/users/{id}/endorsed",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.users.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "endpoint": "/api/{{.users.version}}/users/{id}/endorsed",
+    "method": "POST",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.users.prefix}}/users/{id}/endorsed",
+        "encoding": "json",
+        "method": "POST",
+        "host": [
+          "{{.users.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "endpoint": "/api/{{.users.version}}/users/{id}/endorsed/{id2}",
+    "method": "PUT",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.users.prefix}}/users/{id}/endorsed/{id2}",
+        "encoding": "json",
+        "method": "PUT",
+        "host": [
+          "{{.users.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data"
+      }
+    ]
+  }

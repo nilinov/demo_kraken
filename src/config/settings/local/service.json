@@ -1,0 +1,27 @@
+{
+  "public_keys_url": "https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com",
+  "users": {
+    "version": "v1",
+    "host": "https://develop.lampo.app",
+    "prefix": "/ingress/backend/api/v1"
+  },
+  "dictionary": {
+    "version": "v1",
+    "host": "https://develop.lampo.app",
+    "prefix": "/ingress/backend/api/v1"
+  },
+  "discussion": {
+    "version": "v1",
+    "host": "https://develop.lampo.app",
+    "prefix": "/ingress/backend/api/v1"
+  },
+  "resource": {
+    "version": "v1",
+    "host": "https://develop.lampo.app",
+    "prefix": "/ingress/backend/api/v1"
+  },
+  "krakend": {
+    "host": "http://127.0.0.1:8080",
+    "prefix": "/api/v1"
+  }
+}
