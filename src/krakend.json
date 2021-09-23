@@ -70,6 +70,20 @@
   "output_encoding": "json",
   "name": "Lampo",
   "endpoints": [
+    {
+      "endpoint": "/v1/foo",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/todos",
+          "method": "GET",
+          "host": [
+            "https://jsonplaceholder.typicode.com"
+          ]
+        }
+      ]
+    },
+
     {{ template "debug.tmpl" .service }},
     {{ template "dictionary.tmpl" .service }},
     {{ template "users.tmpl" .service }},
