@@ -71,15 +71,6 @@
   "name": "Lampo",
   "endpoints": [
     {{ template "debug.tmpl" .service }},
-    {{ template "dictionary.tmpl" .service }},
-    {{ template "users.tmpl" .service }},
-    {{ template "feed.tmpl" .service }},
-    {{ template "resources.tmpl" .service }},
-    {{ template "discussion.tmpl" .service }},
-    {{ template "endorsed.tmpl" .service }},
-    {{ template "invites.tmpl" .service }},
-    {{ template "answers.tmpl" .service }},
-    {{ template "chats.tmpl" .service }},
-    {{ template "gamification.tmpl" .service }}
+    {{ template "mock.tmpl" .service }}
   ]
 }
