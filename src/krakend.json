@@ -71,6 +71,6 @@
   "name": "Lampo",
   "endpoints": [
     {{ template "debug.tmpl" .service }},
-    {{ template "mock.tmpl" .service }}
+    {{ template "mock1.tmpl" .service }}
   ]
 }
