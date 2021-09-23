@@ -71,7 +71,7 @@
   "name": "Lampo",
   "endpoints": [
     {
-      "endpoint": "/static?page=1",
+      "endpoint": "/static",
       "backend": [
         {
           "host": [
