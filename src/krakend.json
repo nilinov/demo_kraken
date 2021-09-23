@@ -70,28 +70,17 @@
   "output_encoding": "json",
   "name": "Lampo",
   "endpoints": [
-    {
-      "endpoint": "/static",
-      "backend": [
-        {
-          "host": [
-            "http://ovz5.j1121565.m719m.vps.myjino.ru/"
-          ]
-        }
-      ],
-      "extra_config": {
-        "github.com/devopsfaith/krakend/proxy": {
-          "static": {
-            "strategy": "errored",
-            "data": {
-              "oh-snap": {
-                "id": 42,
-                "bar": "foobar"
-              }
-            }
-          }
-        }
-      }
-    }
+    {{ template "mock.tmpl" .service }},
+    {{ template "debug.tmpl" .service }},
+    {{ template "dictionary.tmpl" .service }},
+    {{ template "users.tmpl" .service }},
+    {{ template "feed.tmpl" .service }},
+    {{ template "resources.tmpl" .service }},
+    {{ template "discussion.tmpl" .service }},
+    {{ template "endorsed.tmpl" .service }},
+    {{ template "invites.tmpl" .service }},
+    {{ template "answers.tmpl" .service }},
+    {{ template "chats.tmpl" .service }},
+    {{ template "gamification.tmpl" .service }}
   ]
 }
