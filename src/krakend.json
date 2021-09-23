@@ -69,6 +69,12 @@
   "cache_ttl": "1s",
   "output_encoding": "json",
   "name": "Lampo",
+  "static": {
+    "strategy": "errored",
+    "data": {
+      "dd": "sdfsdf"
+    }
+  },
   "endpoints": [
     {
       "endpoint": "/v1/foo",
