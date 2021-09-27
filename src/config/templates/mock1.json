@@ -1,3 +1,4 @@
+[
   {
     "endpoint": "/mock/active/page/1",
     "backend": [
@@ -105,7 +106,7 @@
     }
   },
   {
-    "endpoint": "/mock/active/page/1",
+    "endpoint": "/mock/active/page/2",
     "backend": [
       {
         "host": [
@@ -211,7 +212,7 @@
     }
   },
   {
-    "endpoint": "/mock/active/page/1",
+    "endpoint": "/mock/active/page/3",
     "backend": [
       {
         "host": [
@@ -268,3 +269,4 @@
       }
     }
   }
+]
