@@ -71,6 +71,7 @@
   "name": "Lampo",
   "endpoints": [
     {{ template "debug.tmpl" .service }},
+    {{ template "get_challenge.tmpl" .service }},
     {{ template "get_list_active.tmpl" .service }},
     {{ template "get_list_archive.tmpl" .service }}
   ]
