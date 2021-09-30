@@ -74,5 +74,6 @@
     {{ template "get_challenge_view.tmpl" .service }},
     {{ template "get_list_active.tmpl" .service }},
     {{ template "get_list_archive.tmpl" .service }}
+    {{ template "get_challengde_members.tmpl" .service }}
   ]
 }
