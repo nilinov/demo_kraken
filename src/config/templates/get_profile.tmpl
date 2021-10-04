@@ -1,27 +1,34 @@
-
-  {
-    "endpoint": "/mock/me",
-    "backend": [
-      {
-        "host": [
-          "http://ovz5.j1121565.m719m.vps.myjino.ru/"
-        ]
-      }
-    ],
-    "extra_config": {
-      "github.com/devopsfaith/krakend/proxy": {
-        "static": {
-          "strategy": "errored",
-          "data": {
-            "id": 1,
-            "name": "Иван Иванович Сусанин",
-            "organization": "АЗС 115",
-            "position": "Руководитель",
-            "bonuses": 100500,
-            "enablePush": false,
-            "avatar": "1"
-          }
+{
+  "endpoint": "/mock/me",
+  "backend": [
+    {
+      "host": [
+        "http://ovz5.j1121565.m719m.vps.myjino.ru/"
+      ]
+    }
+  ],
+  "extra_config": {
+    "github.com/devopsfaith/krakend/proxy": {
+      "static": {
+        "strategy": "errored",
+        "data": {
+          "id": 1,
+          "name": "Иван Иванович Сусанин",
+          "organization": "АЗС 115",
+          "position": "Руководитель",
+          "bonuses": 100500,
+          "enablePush": false,
+          "avatar": "1"
         }
       }
+    },
+    "github.com/devopsfaith/krakend-jose/validator": {
+      "alg": "RS256",
+      "jwk-url": "{{ .keycloak_jwk_url }}",
+      "roles": [
+        "user"
+      ],
+      "roles_key": "roles"
     }
   }
+}
