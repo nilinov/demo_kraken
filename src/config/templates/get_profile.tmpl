@@ -22,13 +22,6 @@
         }
       }
     },
-    "github.com/devopsfaith/krakend-jose/validator": {
-      "alg": "RS256",
-      "jwk-url": "{{ .keycloak_jwk_url }}",
-      "roles": [
-        "user"
-      ],
-      "roles_key": "roles"
-    }
+    {{ template "jwk_auth_user.tmpl" .service }}
   }
 }
