@@ -78,6 +78,6 @@
     {{ template "get_challenge_command_members.tmpl" .service }},
     {{ template "get_profile.tmpl" .service }},
     {{ template "update_profile.tmpl" .service }},
-    {{ template "get_challengde_members.tmpl" .service }}
+    {{ template "get_challenge_members.tmpl" .service }}
   ]
 }
