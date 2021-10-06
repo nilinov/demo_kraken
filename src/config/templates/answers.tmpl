@@ -1,0 +1,49 @@
+
+  {
+    "endpoint": "/api/{{.discussion.version}}/answers",
+    "method": "GET",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.discussion.prefix}}/answers",
+        "encoding": "json",
+        "method": "GET",
+        "host": [
+          "{{.discussion.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "endpoint": "/api/{{.discussion.version}}/answers/{id}/reaction",
+    "method": "POST",
+    "output_encoding": "json",
+    "headers_to_pass": [
+      "*"
+    ],
+    "backend": [
+      {
+        "url_pattern": "{{.discussion.prefix}}/answers/{id}/reaction",
+        "encoding": "json",
+        "method": "POST",
+        "host": [
+          "{{.discussion.host}}"
+        ],
+        "extra_config": {
+          "github.com/devopsfaith/krakend/http": {
+            "return_error_details": "backend"
+          }
+        },
+        "target": "data"
+      }
+    ]
+  }

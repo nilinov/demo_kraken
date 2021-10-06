@@ -1,0 +1,83 @@
+{
+  "version": 2,
+  "extra_config": {
+    "github_com/devopsfaith/krakend-cors": {
+      "allow_origins": [
+        "*"
+      ],
+      "expose_headers": [
+        "Content-Length",
+        "Accept",
+        "Authorization",
+        "Content-Type",
+        "DNT",
+        "If-Modified-Since",
+        "Keep-Alive",
+        "Origin",
+        "User-Agent",
+        "X-Requested-With",
+        "X-Token-Auth",
+        "X-Token",
+        "Token"
+      ],
+      "max_age": "1s",
+      "allow_methods": [
+        "GET",
+        "HEAD",
+        "POST",
+        "PUT",
+        "DELETE",
+        "CONNECT",
+        "OPTIONS",
+        "TRACE",
+        "PATCH"
+      ],
+      "allow_credentials": true,
+      "allow_headers": [
+        "Content-Length",
+        "Accept",
+        "Authorization",
+        "Content-Type",
+        "DNT",
+        "If-Modified-Since",
+        "Keep-Alive",
+        "Origin",
+        "User-Agent",
+        "X-Requested-With",
+        "X-Token-Auth",
+        "X-Token",
+        "Token"
+      ]
+    },
+    "github_com/devopsfaith/krakend-gologging": {
+      "level": "INFO",
+      "prefix": "[KRAKEND]",
+      "syslog": false,
+      "stdout": true,
+      "format": "default"
+    },
+    "github_com/devopsfaith/krakend-metrics": {
+      "collection_time": "60s",
+      "proxy_disabled": false,
+      "router_disabled": false,
+      "backend_disabled": false,
+      "endpoint_disabled": false,
+      "listen_address": ":8090"
+    }
+  },
+  "timeout": "30000ms",
+  "cache_ttl": "1s",
+  "output_encoding": "json",
+  "name": "Lampo",
+  "endpoints": [
+    {{ template "debug.tmpl" .service }},
+    {{ template "get_challenge_view.tmpl" .service }},
+    {{ template "get_list_active.tmpl" .service }},
+    {{ template "get_list_archive.tmpl" .service }},
+    {{ template "get_challenge_command.tmpl" .service }},
+    {{ template "get_challenge_command_members.tmpl" .service }},
+    {{ template "get_profile.tmpl" .service }},
+    {{ template "update_profile.tmpl" .service }},
+    {{ template "get_challenge_members.tmpl" .service }}
+  ]
+}
