@@ -4,7 +4,7 @@
     "backend": [
       {
         "host": [
-          "http://ovz5.j1121565.m719m.vps.myjino.ru/", "http://madteams.itmegastar.com/api/"
+          "http://ovz5.j1121565.m719m.vps.myjino.ru/"
         ]
       }
     ],
@@ -140,7 +140,7 @@
     "backend": [
       {
         "host": [
-          "http://ovz5.j1121565.m719m.vps.myjino.ru/", "http://madteams.itmegastar.com/api/"
+          "http://ovz5.j1121565.m719m.vps.myjino.ru/"
         ]
       }
     ],
@@ -276,7 +276,7 @@
     "backend": [
       {
         "host": [
-          "http://ovz5.j1121565.m719m.vps.myjino.ru/", "http://madteams.itmegastar.com/api/"
+          "http://ovz5.j1121565.m719m.vps.myjino.ru/"
         ]
       }
     ],
