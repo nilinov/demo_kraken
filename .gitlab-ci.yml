@@ -1,0 +1,7 @@
+stages: 
+    - build
+    - deploy-trigger
+
+include:
+  - project: 'itmegastar-main/madteam/deploy/digitalocean'
+    file: 'ci/.build.gitlab-ci.yml'
