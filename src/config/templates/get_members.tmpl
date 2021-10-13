@@ -1,0 +1,67 @@
+{
+  "endpoint": "mock/admin/v1/users",
+  "backend": [
+    {
+      "host": [
+        "https://develop.madteams.itmegastar.com"
+      ]
+    }
+  ],
+  "extra_config": {
+    "github.com/devopsfaith/krakend/proxy": {
+      "static": {
+        "strategy": "errored",
+        "data": {
+          "data": [
+            {
+              "id": 1,
+              "name": "DuBuque Demario Herzog",
+              "organization": null,
+              "status": "active",
+              "balance": 9238,
+              "code": "58c2cab9-b683-37a5-99e0-2d047fe9725d"
+            },
+            {
+              "id": 2,
+              "name": "Wunsch Scarlett Kub",
+              "organization": null,
+              "status": "active",
+              "balance": 2636,
+              "code": "5e32b20f-0fb4-3a3c-aea1-b925119bc5af"
+            },
+            {
+              "id": 3,
+              "name": "Hickle Ross Bosco",
+              "organization": null,
+              "status": "active",
+              "balance": 9607,
+              "code": "772890b5-90fe-35c0-8ced-edabe3db2bf5"
+            },
+            {
+              "id": 4,
+              "name": "Luettgen Olga Wiza",
+              "organization": null,
+              "status": "active",
+              "balance": 5174,
+              "code": "61911102-4aaf-35be-848f-563e2c88b5c5"
+            },
+            {
+              "id": 5,
+              "name": "Nitzsche Lolita Beatty",
+              "organization": null,
+              "status": "active",
+              "balance": 7935,
+              "code": "5de530d3-8fd8-3522-a2a3-2d59b0b9b1f5"
+            }
+          ],
+          "meta": {
+            "current_page": 1,
+            "last_page": 1,
+            "per_page": 10,
+            "total": 5
+          }
+        }
+      }
+    }
+  }
+}
