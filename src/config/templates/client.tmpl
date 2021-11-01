@@ -1,13 +1,13 @@
 
 {
-  "endpoint": "/challenges",
+  "endpoint": "/api/client/v1/challenges",
   "method": "GET",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/challenges",
+    "url_pattern": "/api/client/v1/challenges",
       "method": "GET",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
@@ -16,14 +16,14 @@
 },
 
 {
-  "endpoint": "/challenges/{id}",
+  "endpoint": "/api/client/v1/challenges/{id}",
   "method": "GET",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/challenges/{id}",
+    "url_pattern": "/api/client/v1/challenges/{id}",
       "method": "GET",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
@@ -32,14 +32,14 @@
 },
 
 {
-  "endpoint": "/challenges/{id}/participants",
+  "endpoint": "/api/client/v1/challenges/{id}/participants",
   "method": "GET",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/challenges/{id}/participants",
+    "url_pattern": "/api/client/v1/challenges/{id}/participants",
       "method": "GET",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
@@ -48,14 +48,14 @@
 },
 
 {
-  "endpoint": "/challenges/{id}/participants/{group_id}/users",
+  "endpoint": "/api/client/v1/challenges/{id}/participants/{group_id}/users",
   "method": "GET",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/challenges/{id}/participants/{group_id}/users",
+    "url_pattern": "/api/client/v1/challenges/{id}/participants/{group_id}/users",
       "method": "GET",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
@@ -64,14 +64,14 @@
 },
 
 {
-  "endpoint": "/user",
+  "endpoint": "/api/client/v1/user",
   "method": "GET",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/user",
+    "url_pattern": "/api/client/v1/user",
       "method": "GET",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
@@ -80,14 +80,14 @@
 },
 
 {
-  "endpoint": "/user",
+  "endpoint": "/api/client/v1/user",
   "method": "PUT",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/user",
+    "url_pattern": "/api/client/v1/user",
       "method": "PUT",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
@@ -96,14 +96,14 @@
 },
 
 {
-  "endpoint": "/device-token",
+  "endpoint": "/api/client/v1/device-token",
   "method": "POST",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/device-token",
+    "url_pattern": "/api/client/v1/device-token",
       "method": "POST",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
@@ -112,14 +112,14 @@
 },
 
 {
-  "endpoint": "/device-token/{device_udid}",
+  "endpoint": "/api/client/v1/device-token/{device_udid}",
   "method": "DELETE",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   
   "backend": [
     {
-    "url_pattern": "/device-token/{device_udid}",
+    "url_pattern": "/api/client/v1/device-token/{device_udid}",
       "method": "DELETE",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
