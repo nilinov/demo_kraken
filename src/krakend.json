@@ -70,7 +70,6 @@
   "output_encoding": "json",
   "name": "Lampo",
   "endpoints": [
-    {{ template "admin.tmpl" .service }},
     {{ template "debug.tmpl" .service }},
     {{ template "get_challenge_view.tmpl" .service }},
     {{ template "get_list_active.tmpl" .service }},
