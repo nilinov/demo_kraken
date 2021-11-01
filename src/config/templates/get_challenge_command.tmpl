@@ -4,13 +4,13 @@
   "endpoint": "/api/admin/v1/users",
   "method": "GET",
   "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
   "backend": [
     {
-      "url_pattern": "/api/admin/v1/users",
+    "url_pattern": "/admin/v1/users",
       "method": "GET",
-      "host": [
-        "http://backend-nginx"
-      ]
+      "encoding": "json",
+      "host": [ "http://backend-nginx" ]
     }
   ]
 },
