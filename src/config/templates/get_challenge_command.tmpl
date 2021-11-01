@@ -1,17 +1,5 @@
-{
-  "endpoint": "/api/admin/v1/users",
-  "method": "GET",
-  "output_encoding": "no-op",
-  "headers_to_pass": [ "*" ],
-  "backend": [
-    {
-    "url_pattern": "/ingress/backend/api/admin/v1/challenges",
-      "method": "GET",
-      "encoding": "no-op",
-      "host": [ "https://develop.madteams.itmegastar.com" ]
-    }
-  ]
-},
+
+,
   {
     "endpoint": "/api/mock/challenge/3/command/1",
     "backend": [
