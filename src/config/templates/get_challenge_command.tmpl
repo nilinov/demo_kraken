@@ -1,4 +1,18 @@
 
+
+{
+  "endpoint": "/api/admin/v1/users",
+  "method": "GET",
+  "backend": [
+    {
+      "url_pattern": "/api/admin/v1/users",
+      "method": "GET",
+      "host": [
+        "http://backend-nginx"
+      ]
+    }
+  ]
+},
   {
     "endpoint": "/api/mock/challenge/3/command/1",
     "backend": [
