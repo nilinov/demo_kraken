@@ -1,0 +1,128 @@
+
+{
+  "endpoint": "/challenges",
+  "method": "GET",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/challenges",
+      "method": "GET",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+},
+
+{
+  "endpoint": "/challenges/{id}",
+  "method": "GET",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/challenges/{id}",
+      "method": "GET",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+},
+
+{
+  "endpoint": "/challenges/{id}/participants",
+  "method": "GET",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/challenges/{id}/participants",
+      "method": "GET",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+},
+
+{
+  "endpoint": "/challenges/{id}/participants/{group_id}/users",
+  "method": "GET",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/challenges/{id}/participants/{group_id}/users",
+      "method": "GET",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+},
+
+{
+  "endpoint": "/user",
+  "method": "GET",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/user",
+      "method": "GET",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+},
+
+{
+  "endpoint": "/user",
+  "method": "PUT",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/user",
+      "method": "PUT",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+},
+
+{
+  "endpoint": "/device-token",
+  "method": "POST",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/device-token",
+      "method": "POST",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+},
+
+{
+  "endpoint": "/device-token/{device_udid}",
+  "method": "DELETE",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  
+  "backend": [
+    {
+    "url_pattern": "/device-token/{device_udid}",
+      "method": "DELETE",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ]
+}
