@@ -358,7 +358,7 @@
 
 {
   "endpoint": "/api/admin/v1/templates/{id}/activate",
-  "method": "POST",
+  "method": "PUT",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
   "querystring_params": [ "*" ],
@@ -366,7 +366,7 @@
   "backend": [
     {
     "url_pattern": "/api/admin/v1/templates/{id}/activate",
-      "method": "POST",
+      "method": "PUT",
       "encoding": "no-op",
       "host": [ "http://backend-nginx" ]
     }
