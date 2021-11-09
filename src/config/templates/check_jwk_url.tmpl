@@ -1,0 +1,26 @@
+{
+  "endpoint": "/check-jwk",
+  "method": "GET",
+  "output_encoding": "no-op",
+  "headers_to_pass": [ "*" ],
+  "querystring_params": [ "*" ],
+
+  "backend": [
+    {
+    "url_pattern": "/jwk",
+      "method": "GET",
+      "encoding": "no-op",
+      "host": [ "http://backend-nginx" ]
+    }
+  ],
+  "extra_config": {
+      "github.com/devopsfaith/krakend-jose/validator": {
+      "alg": "RS256",
+      "jwk-url": "{{ .keycloak_jwk_url_megastar }}",
+      "roles": [
+        "user"
+      ],
+      "roles_key": "roles"
+    }
+  }
+}
