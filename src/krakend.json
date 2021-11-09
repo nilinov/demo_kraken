@@ -81,6 +81,7 @@
     {{ template "get_profile.tmpl" .service }},
     {{ template "update_profile.tmpl" .service }},
     {{ template "get_challenge_members.tmpl" .service }},
-    {{ template "get_members.tmpl" .service }}
+    {{ template "get_members.tmpl" .service }},
+    {{ template "itmegastar_realm_admin.tmpl" .service }}
   ]
 }

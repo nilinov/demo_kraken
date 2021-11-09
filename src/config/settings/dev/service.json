@@ -1,5 +1,6 @@
 {
   "keycloak_jwk_url": "https://kc.itmegastar.com/auth/realms/mt_itmegastar/protocol/openid-connect/certs",
+  "keycloak_jwk_url_megastar": "https://kc.itmegastar.com/auth/realms/mt_itmegastar/protocol/openid-connect/certs",
   "public_keys_url": "https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com",
   "users": {
     "version": "v1",
