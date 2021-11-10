@@ -1,5 +1,5 @@
 {
-  "endpoint": "/itmegastar/api/admin/v1/users",
+  "endpoint": "/_itmegastar/api/admin/v1/users",
   "method": "GET",
   "output_encoding": "no-op",
   "headers_to_pass": [ "*" ],
@@ -14,7 +14,7 @@
     }
   ],
   "extra_config": {
-      "github.com/devopsfaith/krakend-jose/validator": {
+    "github.com/devopsfaith/krakend-jose/validator": {
       "alg": "RS256",
       "jwk-url": "{{ .keycloak_jwk_url_megastar }}",
       "roles": [
